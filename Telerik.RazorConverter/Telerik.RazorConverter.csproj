@@ -59,10 +59,15 @@
     <Compile Include="Razor\Converters\CodeBlockConverter.cs" />
     <Compile Include="Razor\Converters\ExpressionBlockConverter.cs" />
     <Compile Include="IOrderMetadata.cs" />
+    <Compile Include="Razor\Converters\ScriptConverter.cs" />
+    <Compile Include="Razor\DOM\IRazorScriptFactory.cs" />
+    <Compile Include="Razor\DOM\IRazorScriptNode.cs" />
     <Compile Include="Razor\DOM\RazorCommentNode.cs" />
     <Compile Include="Razor\DOM\RazorCommentNodeFactory.cs" />
     <Compile Include="Razor\DOM\IRazorCommentNode.cs" />
     <Compile Include="Razor\DOM\IRazorCommentNodeFactory.cs" />
+    <Compile Include="Razor\DOM\RazorScript.cs" />
+    <Compile Include="Razor\DOM\RazorScriptNodeFactory.cs" />
     <Compile Include="Razor\DOM\RazorSectionNodeFactory.cs" />
     <Compile Include="Razor\DOM\RazorSectionNode.cs" />
     <Compile Include="Razor\DOM\IRazorSectionNodeFactory.cs" />
@@ -88,6 +93,7 @@
     <Compile Include="Razor\Rendering\CommentNodeRenderer.cs" />
     <Compile Include="Razor\Rendering\RazorNodeRendererProvider.cs" />
     <Compile Include="Razor\Rendering\IRazorNodeRendererProvider.cs" />
+    <Compile Include="Razor\Rendering\ScriptRenderer.cs" />
     <Compile Include="Razor\Rendering\SectionNodeRenderer.cs" />
     <Compile Include="Razor\Rendering\ExpressionNodeRenderer.cs" />
     <Compile Include="Razor\Rendering\TextNodeRenderer.cs" />
@@ -103,6 +109,8 @@
     <Compile Include="Razor\Rendering\IRazorNodeRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Razor\Converters\WebFormsToRazorConverter.cs" />
+    <Compile Include="WebForms\DOM\IWebFormsScriptNode.cs" />
+    <Compile Include="WebForms\DOM\ScriptNode.cs" />
     <Compile Include="WebForms\DOM\WebFormsCodeBlockNode.cs" />
     <Compile Include="WebForms\DOM\CommentNode.cs" />
     <Compile Include="WebForms\DOM\CodeBlockNodeType.cs" />
