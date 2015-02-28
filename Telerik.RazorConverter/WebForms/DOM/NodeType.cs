@@ -1,4 +1,4 @@
-﻿namespace Telerik.RazorConverter.WebForms.DOM
+namespace Telerik.RazorConverter.WebForms.DOM
 {
     public enum NodeType
     {
@@ -9,6 +9,7 @@
         EncodedExpressionBlock,
         ServerControl,
         Text,
-        Comment
+        Comment,
+        Script
     }
 }
