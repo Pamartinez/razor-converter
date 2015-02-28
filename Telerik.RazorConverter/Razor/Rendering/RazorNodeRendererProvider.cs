@@ -1,4 +1,4 @@
-﻿namespace Telerik.RazorConverter.Razor.Rendering
+namespace Telerik.RazorConverter.Razor.Rendering
 {
     using System.Collections.Generic;
     using System.ComponentModel.Composition;
@@ -20,6 +20,7 @@
                 new CodeNodeRenderer(),
                 new ExpressionNodeRenderer(),
                 new TextNodeRenderer(),
+                new ScriptRenderer(),
                 new CommentNodeRenderer(),
                 new SectionNodeRenderer(this)
             };
