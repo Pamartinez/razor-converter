@@ -1,4 +1,4 @@
-﻿namespace Telerik.RazorConverter.WebForms.Parsing
+namespace Telerik.RazorConverter.WebForms.Parsing
 {
     using System;
     using System.Collections.Generic;
@@ -24,6 +24,7 @@
             NodeBuilders = new Dictionary<NodeType, Func<Match, IWebFormsNode>>();
             NodeBuilders.Add(NodeType.Directive, DirectiveNodeBuilder);
             NodeBuilders.Add(NodeType.Text, TextNodeBuilder);
+            NodeBuilders.Add(NodeType.Script, Scriptuilder);
             NodeBuilders.Add(NodeType.Comment, CommentNodeBuilder);
             NodeBuilders.Add(NodeType.ServerControl, ServerControlNodeBuilder);
             NodeBuilders.Add(NodeType.CodeBlock, CodeBlockNodeBuilder);
@@ -72,6 +73,13 @@
                 }
             }
 
+            return node;
+        }
+
+        private IWebFormsNode Scriptuilder(Match match)
+        {
+            var node = new ScriptNode { Text = match.Value };
+            attributesReader.ReadAttributes(match, node.Attributes);
             return node;
         }
 
