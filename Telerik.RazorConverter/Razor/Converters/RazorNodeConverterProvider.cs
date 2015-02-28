@@ -1,9 +1,9 @@
-﻿namespace Telerik.RazorConverter.Razor.Converters
+namespace Telerik.RazorConverter.Razor.Converters
 {
     using System.Collections.Generic;
     using System.ComponentModel.Composition;
-    using Telerik.RazorConverter;
-    using Telerik.RazorConverter.Razor.DOM;
+    using RazorConverter;
+    using DOM;
 
     [Export(typeof(IRazorNodeConverterProvider))]
     public class RazorNodeConverterProvider : IRazorNodeConverterProvider
@@ -13,6 +13,7 @@
                                             IRazorSectionNodeFactory sectionNodeFactory,
                                             IRazorCodeNodeFactory codeNodeFactory,
                                             IRazorTextNodeFactory textNodeFactory,
+                                            IRazorScriptFactory scriptFactory,
                                             IRazorCommentNodeFactory commentNodeFactory,
                                             IRazorExpressionNodeFactory expressionNodeFactory,
                                             IContentTagConverterConfiguration contentTagConverterConfig)
@@ -23,6 +24,7 @@
                 new CodeGroupConverter(this),
                 new CodeBlockConverter(codeNodeFactory),
                 new TextNodeConverter(textNodeFactory),
+                new ScriptConverter(scriptFactory), 
                 new CommentNodeConverter(commentNodeFactory),
                 new ExpressionBlockConverter(expressionNodeFactory)
             };
